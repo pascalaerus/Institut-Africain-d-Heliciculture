@@ -4,48 +4,123 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Institut Africain d'Héliciculture</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             background-color: #f9f9f9;
             color: #333;
+            scroll-behavior: smooth;
         }
         header {
             background-color: #0a582f;
             color: white;
             text-align: center;
-            padding: 20px 0;
+            padding: 30px 20px;
+            animation: slideDown 1s ease-out;
         }
         header h1 {
             margin: 0;
-            font-size: 2.4em;
+            font-size: 2.8em;
+        }
+        header p {
+            font-size: 1.2em;
         }
         nav {
-            margin: 20px auto;
+            background-color: #e6f0e6;
+            padding: 15px 0;
             text-align: center;
+            animation: fadeIn 2s ease-in;
         }
         nav a {
-            margin: 0 12px;
+            margin: 0 15px;
             text-decoration: none;
             font-weight: bold;
             color: #0a582f;
+            transition: color 0.3s;
         }
         nav a:hover {
             color: #1a8f4a;
         }
-        .hero {
-            margin-top: 30px;
+        section {
+            padding: 60px 20px;
             text-align: center;
-            padding: 40px 20px;
         }
         .hero h2 {
-            font-size: 2em;
+            font-size: 2.2em;
             margin-bottom: 10px;
+            animation: fadeIn 2s ease-in;
         }
         .hero p {
             font-size: 1.2em;
             color: #555;
+        }
+        .services {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 30px;
+        }
+        .service-item {
+            background-color: white;
+            border-radius: 12px;
+            padding: 25px;
+            width: 250px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .service-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        .service-item i {
+            font-size: 3em;
+            color: #0a582f;
+            margin-bottom: 15px;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+        .gallery img {
+            width: 250px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 12px;
+            transition: transform 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        .contact-form {
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 1em;
+        }
+        .contact-form button {
+            background-color: #0a582f;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .contact-form button:hover {
+            background-color: #1a8f4a;
         }
         .social {
             margin: 40px auto;
@@ -61,46 +136,105 @@
             border-radius: 8px;
             font-size: 1em;
             width: 160px;
+            transition: background-color 0.3s;
         }
         .social a:hover {
             background-color: #1a8f4a;
         }
         footer {
             text-align: center;
-            padding: 15px;
+            padding: 20px;
             background-color: #0a582f;
             color: white;
-            margin-top: 50px;
         }
+
+        @keyframes slideDown {
+            0% { transform: translateY(-100px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
     </style>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
     <header>
         <h1>Institut Africain d'Héliciculture</h1>
-        <p>Promotion ✦ Recherche ✦ Développement durable</p>
+        <p>Promotion ✦ Formation ✦ Développement durable</p>
     </header>
 
     <nav>
         <a href="#about">À propos</a>
         <a href="#services">Services</a>
-        <a href="#contact">Nous suivre</a>
+        <a href="#gallery">Projets</a>
+        <a href="#contact">Contact</a>
     </nav>
 
     <section class="hero" id="about">
         <h2>Votre expert en héliciculture en Afrique</h2>
-        <p>Développement d’élevage d’escargots, formation professionnelle, innovations durables.</p>
+        <p>Développement d’élevage d’escargots, formation professionnelle et innovations durables.</p>
     </section>
 
-    <section class="social" id="contact">
+    <!-- Section Services -->
+    <section class="services" id="services">
+        <div class="service-item">
+            <i class="fas fa-leaf"></i>
+            <h3>Formation</h3>
+            <p>Accompagnement complet pour éleveurs débutants ou expérimentés.</p>
+        </div>
+        <div class="service-item">
+            <i class="fas fa-flask"></i>
+            <h3>Recherche & Innovation</h3>
+            <p>Amélioration des techniques et productivité de l’élevage.</p>
+        </div>
+        <div class="service-item">
+            <i class="fas fa-hand-holding-usd"></i>
+            <h3>Investissement</h3>
+            <p>Opportunités rentables dans l’héliciculture durable en Afrique.</p>
+        </div>
+        <div class="service-item">
+            <i class="fas fa-globe-africa"></i>
+            <h3>Développement durable</h3>
+            <p>Promotion d’une agriculture responsable et respectueuse de l’environnement.</p>
+        </div>
+    </section>
+
+    <!-- Galerie d'images -->
+    <section class="gallery" id="gallery">
+        <h2>Nos projets récents</h2>
+        <div class="gallery">
+            <img src="https://via.placeholder.com/250x180?text=Projet+1" alt="Projet 1">
+            <img src="https://via.placeholder.com/250x180?text=Projet+2" alt="Projet 2">
+            <img src="https://via.placeholder.com/250x180?text=Projet+3" alt="Projet 3">
+            <img src="https://via.placeholder.com/250x180?text=Projet+4" alt="Projet 4">
+        </div>
+    </section>
+
+    <!-- Formulaire de contact -->
+    <section id="contact">
+        <h2>Contactez-nous</h2>
+        <form class="contact-form" action="https://formsubmit.co/votre-email@example.com" method="POST">
+            <input type="text" name="name" placeholder="Votre nom" required>
+            <input type="email" name="email" placeholder="Votre email" required>
+            <textarea name="message" placeholder="Votre message" rows="5" required></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
+
+    <!-- Réseaux sociaux -->
+    <section class="social">
         <h2>Retrouvez-nous sur les réseaux</h2>
         <a href="https://www.facebook.com/profile.php?id=61584649108719" target="_blank">Facebook</a>
         <a href="https://x.com/institut11892" target="_blank">Twitter / X</a>
-        <a href="https://www.linkedin.com/in/emmanuel-tito-3160b2393?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/emmanuel-tito-3160b2393" target="_blank">LinkedIn</a>
         <a href="https://vm.tiktok.com/ZS9J56A13Rsot-UMv5a/" target="_blank">TikTok</a>
-        <a href="https://www.instagram.com/institutafricainheliciculture3?igsh=eHdxdDQzdTlhcHoy" target="_blank">Instagram</a>
-        <a href="https://youtube.com/@institutafricaindheliciculture?si=zLl5nymKa6CDw0e8" target="_blank">YouTube</a>
-        <a href="https://www.snapchat.com/add/iah.tv?share_id=GerJA_cqLeA&locale=fr-FR" target="_blank">Snapchat</a>
+        <a href="https://www.instagram.com/institutafricainheliciculture3" target="_blank">Instagram</a>
+        <a href="https://youtube.com/@institutafricaindheliciculture" target="_blank">YouTube</a>
+        <a href="https://www.snapchat.com/add/iah.tv" target="_blank">Snapchat</a>
     </section>
 
     <footer>
