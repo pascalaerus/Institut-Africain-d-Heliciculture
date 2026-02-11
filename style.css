@@ -90,9 +90,15 @@ nav a:hover {
     margin-bottom: 20px;
 }
 
+/* Petits textes en noir pour lisibilité */
 .hero p {
     font-size: 1.2em;
-    color: #555;
+    color: #000000; /* <-- changé de #555 à noir */
+    background-color: rgba(255, 255, 255, 0.7); /* fond légèrement transparent */
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 8px;
+    line-height: 1.5;
 }
 
 /* ========== SERVICES SECTION ========== */
