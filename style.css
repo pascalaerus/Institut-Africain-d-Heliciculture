@@ -348,3 +348,44 @@ footer {
     border-radius: 8px;                   /* coins arrondis */
     margin-bottom: 15px;                  /* espace entre les paragraphes */
 }
+.projets-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px; /* espace entre le texte et les images */
+}
+
+.projet-item {
+    background-color: rgba(255,255,255,0.9); /* fond léger pour lisibilité */
+    border-radius: 12px;
+    overflow: hidden;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.projet-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s;
+}
+
+.projet-item p {
+    padding: 10px 15px;
+    font-size: 1em;
+    color: #0a582f;
+    margin: 0;
+}
+
+.projet-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+}
+
+.projet-item img:hover {
+    transform: scale(1.05);
+}
