@@ -124,6 +124,15 @@ nav a:hover {
     transform: translateY(-10px);
     box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
+/* Petits textes dans les blocs SERVICES */
+.service-item p {
+    color: #000000; /* texte noir pour lisibilité */
+    background-color: rgba(255, 255, 255, 0.7); /* fond blanc translucide */
+    padding: 5px 10px;
+    border-radius: 6px;
+    line-height: 1.4;
+}
+
 
 .service-item i {
     font-size: 3em;
