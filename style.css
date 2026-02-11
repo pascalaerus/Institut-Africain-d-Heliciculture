@@ -255,3 +255,33 @@ footer {
 .whatsapp-channel marquee {
     color: white;
 }
+
+.map-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.map-section h2 {
+    margin-bottom: 30px;
+}
+
+.map-container {
+    max-width: 1000px;
+    margin: auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    animation: fadeInMap 1.5s ease-in-out;
+}
+
+/* Animation douce */
+@keyframes fadeInMap {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
