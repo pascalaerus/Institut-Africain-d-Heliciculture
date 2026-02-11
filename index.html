@@ -1,94 +1,71 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Institut Africain d'Héliciculture</title>
-<link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-d9T6v0uUZj2I3fSCl0x5+X9pYl3MbN3dIWj7yH7oF0kQXWmQG1oWwT2v16X9T1+1kL0yZ1FJ+3i3j1vUyz3Vcw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Institut Africain d'Héliciculture</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
 <header>
-    <img src="logo.jpg" alt="Logo IAH" style="height:80px; margin-bottom:10px;">
+    <div class="logo-container">
+        <img src="logo.jpg" alt="Logo IAH">
+    </div>
     <h1>Institut Africain d'Héliciculture</h1>
     <p>Promotion ✦ Formation ✦ Développement durable</p>
 </header>
 
 <nav>
-    <a href="#about">À propos</a>
-    <a href="#services">Services</a>
-    <a href="#gallery">Projets</a>
-    <a href="#contact">Contact</a>
+    <a href="index.html">Accueil</a>
+    <a href="about.html">À propos</a>
+    <a href="projet.html">Projets</a>
+    <a href="photos.html">Photos</a>
+    <a href="contact.html">Contact</a>
 </nav>
 
-<section class="hero" id="about">
-    <h2>Votre expert en héliciculture en Afrique</h2>
-    <p>Développement d’élevage d’escargots, formation professionnelle et innovations durables.</p>
+<section class="hero">
+    <h2>Bienvenue à l'Institut Africain d'Héliciculture</h2>
+    <p>Nous formons et développons l’élevage d’escargots à travers l’Afrique pour un futur durable.</p>
 </section>
 
-<section class="services" id="services">
-    <h2>Nos Services</h2>
+<section class="services">
     <div class="service-item">
-        <i class="fas fa-leaf"></i>
+        <i class="fas fa-seedling"></i>
         <h3>Formation</h3>
-        <p>Accompagnement complet pour éleveurs débutants ou expérimentés.</p>
+        <p>Des formations pratiques sur l’héliciculture pour débutants et professionnels.</p>
     </div>
     <div class="service-item">
-        <i class="fas fa-flask"></i>
-        <h3>Recherche & Innovation</h3>
-        <p>Amélioration des techniques et productivité de l’élevage.</p>
-    </div>
-    <div class="service-item">
-        <i class="fas fa-hand-holding-dollar"></i>
+        <i class="fas fa-piggy-bank"></i>
         <h3>Investissement</h3>
-        <p>Opportunités rentables dans l’héliciculture durable en Afrique.</p>
+        <p>Nous accompagnons les investisseurs dans la mise en place de parcs hélicicoles.</p>
     </div>
     <div class="service-item">
-        <i class="fas fa-globe-africa"></i>
-        <h3>Développement durable</h3>
-        <p>Promotion d’une agriculture responsable et respectueuse de l’environnement.</p>
+        <i class="fas fa-hand-holding-water"></i>
+        <h3>Accompagnement</h3>
+        <p>Suivi personnalisé pour maximiser la rentabilité de vos élevages.</p>
     </div>
 </section>
 
 <section class="gallery" id="gallery">
     <h2>Nos projets récents</h2>
-    <div class="gallery-grid">
-        <!-- Exemple de 6 images, tu pourras rajouter toutes tes 200+ photos -->
-        <img src="images/projet1.jpg" alt="Projet 1">
-        <img src="images/projet2.jpg" alt="Projet 2">
-        <img src="images/projet3.jpg" alt="Projet 3">
-        <img src="images/projet4.jpg" alt="Projet 4">
-        <img src="images/projet5.jpg" alt="Projet 5">
-        <img src="images/projet6.jpg" alt="Projet 6">
+    <div class="gallery-grid" id="gallery-grid">
+        <!-- Les images seront ajoutées dynamiquement sur photos.html -->
     </div>
 </section>
 
-<section id="contact">
-    <h2>Contactez-nous</h2>
-    <form class="contact-form" action="https://formsubmit.co/institutafricaindheliciculture@gmail.com" method="POST">
-        <input type="text" name="name" placeholder="Votre nom" required>
-        <input type="email" name="email" placeholder="Votre email" required>
-        <textarea name="message" placeholder="Votre message" rows="5" required></textarea>
-        <button type="submit">Envoyer</button>
-    </form>
-</section>
-
-<section class="social">
-    <h2>Retrouvez-nous sur les réseaux</h2>
+<div class="social">
     <a href="https://www.facebook.com/profile.php?id=61584649108719" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a>
-    <a href="https://x.com/institut11892" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+    <a href="https://x.com/institut11892" target="_blank"><i class="fab fa-x-twitter"></i> Twitter</a>
     <a href="https://www.linkedin.com/in/emmanuel-tito-3160b2393" target="_blank"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
-    <a href="https://vm.tiktok.com/ZS9J56A13Rsot-UMv5a/" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a>
     <a href="https://www.instagram.com/institutafricainheliciculture3" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
-    <a href="https://youtube.com/@institutafricaindheliciculture" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
     <a href="https://www.snapchat.com/add/iah.tv" target="_blank"><i class="fab fa-snapchat-ghost"></i> Snapchat</a>
-</section>
+    <a href="https://youtube.com/@institutafricaindheliciculture" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
+</div>
 
 <footer>
-    &copy; 2026 Institut Africain d'Héliciculture — Tous droits réservés.
+    &copy; 2026 Institut Africain d'Héliciculture | Email: institutafricaindheliciculture@gmail.com
 </footer>
 
 </body>
